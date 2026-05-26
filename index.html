@@ -200,8 +200,8 @@
       <div style="font-size:11px;color:var(--red);">現状の管理職業務数</div>
     </div>
     <div style="font-size:12px;color:var(--red);line-height:1.9;flex:1;">
-      <strong>4名で53項目を分担している現状。</strong><br>
-      うち日次業務だけで約20項目。臨床業務（プレイヤー）をこなしながら回している構造は<strong>物理的に限界</strong>に近い。<br>
+      <strong>53項目の管理職業務を限られたマンパワーで分担している現状。</strong><br>
+      うち日次業務だけで約20項目。臨床業務（プレイヤー）をこなしながら回しており、<strong>新規の取り組みに充てる余力が生まれにくい構造</strong>になっている。<br>
       残業・休日対応が常態化しているのは、個人の努力不足ではなく<strong>設計の問題</strong>である。
     </div>
     <div style="text-align:center;border-left:1px solid var(--red);padding-left:20px;">
@@ -230,13 +230,14 @@
   </div>
 
   <!-- Members -->
-  <div class="member-grid">
-    <div class="member-card mc-blue"><div class="member-name">大出（主任）</div></div>
-    <div class="member-card mc-teal"><div class="member-name">石垣（主任）</div></div>
-    <div class="member-card mc-green"><div class="member-name">渡部（副主任）</div></div>
-    <div class="member-card mc-red"><div class="member-name">鈴木（副主任）</div></div>
-    <div class="member-card mc-forest"><div class="member-name">工藤（スタッフ）</div></div>
-    <div class="member-card mc-purple"><div class="member-name">杉田（リーダー）</div></div>
+  <div class="member-grid" style="grid-template-columns: repeat(7, 1fr);">
+    <div class="member-card mc-blue"><div class="member-name">大出</div></div>
+    <div class="member-card mc-teal"><div class="member-name">石垣</div></div>
+    <div class="member-card mc-green"><div class="member-name">渡部</div></div>
+    <div class="member-card mc-red"><div class="member-name">鈴木</div></div>
+    <div class="member-card mc-forest"><div class="member-name">工藤</div></div>
+    <div class="member-card mc-purple"><div class="member-name">杉田</div></div>
+    <div class="member-card mc-blue"><div class="member-name">藤澤</div></div>
   </div>
 
   <!-- 進捗サマリー -->
@@ -342,7 +343,7 @@
       </tr></thead>
       <tbody id="block4-body"></tbody>
     </table>
-    <div class="note-box nb-green">※ 大さんは時間的制約を前提とし、明確な担当業務を割り当てる。工藤・杉田は得意分野に絞って依頼し、負担過多にならないよう配慮する。</div>
+
     <button onclick="addBlock4Row()" style="margin-top:10px;padding:7px 16px;font-size:12px;border:1px solid var(--green);border-radius:var(--border-radius-md,6px);background:var(--green-l);color:var(--green);cursor:pointer;font-weight:bold;">＋ 業務を追加する</button>
   </div>
 
@@ -390,8 +391,8 @@
 </div>
 
 <script>
-const members = ['', '大出', '石垣', '渡部', '鈴木', '工藤', '杉田', 'AI・ツール', '未定', '──────', 'やらないと決めた', '自由入力...'];
-const colorMap = { '大出':'blue','石垣':'teal','渡部':'green','鈴木':'red','工藤':'forest','杉田':'purple','AI・ツール':'ai','未定':'','やらないと決めた':'delete','自由入力...':'custom' };
+const members = ['', '大出', '石垣', '渡部', '鈴木', '工藤', '杉田', '藤澤', 'AI・ツール', '未定', '──────', 'やらないと決めた', '自由入力...'];
+const colorMap = { '大出':'blue','石垣':'teal','渡部':'green','鈴木':'red','工藤':'forest','杉田':'purple','藤澤':'blue','AI・ツール':'ai','未定':'','やらないと決めた':'delete','自由入力...':'custom' };
 
 const block2Tasks = [
   // 人事管理
@@ -994,6 +995,7 @@ const memberDefs = [
   { name:'鈴木', cls:'mc-red', color:'#993556', bg:'#FBEAF0' },
   { name:'工藤', cls:'mc-forest', color:'#3B6D11', bg:'#EAF3DE' },
   { name:'杉田', cls:'mc-purple', color:'#534AB7', bg:'#EEEDFE' },
+  { name:'藤澤', cls:'mc-blue', color:'#185FA5', bg:'#E6F1FB' },
   { name:'AI・ツール', cls:'mc-purple', color:'#534AB7', bg:'#EEEDFE' },
 ];
 
